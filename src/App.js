@@ -15,7 +15,7 @@ function App() {
   let [genres, setGenres] = useState(null);
   let [yearValue, setYearValue] = useState({ min: 1970, max: 2020 })
   let [originList, setOriginalList] = useState(null)
-  let [rating, setRating] = useState(null)
+  // let [rating, setRating] = useState(null)
   console.log(apikey)
   let [movieList, setMovieList] = useState(null);
   const callMovie = async () => {
@@ -53,15 +53,15 @@ function App() {
     callMovie();
   }
 
-  const getNowPlaying = async (pageNum) => {
-    let url = `https://api.themoviedb.org/3/movie/popular?api_key=${apikey}&language=en-US&page=${pageNum}`
-    let result = await fetch(url);
-    let data = await result.json();
-    setMovieList(data.results);
-    // setOriginalList(data.results);
-    // setTotalResult(data, total_results)
+  // const getNowPlaying = async (pageNum) => {
+  //   let url = `https://api.themoviedb.org/3/movie/popular?api_key=${apikey}&language=en-US&page=${pageNum}`
+  //   let result = await fetch(url);
+  //   let data = await result.json();
+  //   setMovieList(data.results);
+  //   // setOriginalList(data.results);
+  //   // setTotalResult(data, total_results)
 
-  }
+  // }
 
   // run at first
   useEffect(() => {

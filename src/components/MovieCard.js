@@ -38,7 +38,7 @@ export default function MovieCard({ movie, genres }) {
                     {movie.genre_ids.map(genre => {
                         return (
                             <Badge>
-                                {genres.find(item => item.id == genre).name}
+                                {genres.find(item => item.id === genre).name}
                             </Badge>)
                     })}
                 </div>
