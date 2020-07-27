@@ -16,7 +16,7 @@ function App() {
   let [originList, setOriginalList] = useState(null)
   let [rating, setRating] = useState(null)
   console.log(apikey)
-  let [movieList, setMovieList] = useStagit initte(null);
+  let [movieList, setMovieList] = useState(null);
   const callMovie = async () => {
     let url = `https://api.themoviedb.org/3/movie/popular?api_key=${apikey}&language=en-US&page=1`
     console.log(url)
